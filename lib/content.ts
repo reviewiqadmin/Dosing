@@ -148,7 +148,7 @@ export const about = {
 
 export const enquiryEmails = [
   "VishalSharma@DosInd.com",
-  "AnujSiingh@DosInd.com",
+  "Anujsingh@DosInd.com",
 ];
 
 export type TeamMember = {
@@ -176,7 +176,7 @@ export const team: TeamMember[] = [
   {
     name: "Anuj Singh",
     role: "Founder and Technical Director",
-    email: "AnujSiingh@DosInd.com",
+    email: "Anujsingh@DosInd.com",
     phone: "99903 73927",
     phoneHref: "tel:+919990373927",
     paragraphs: [

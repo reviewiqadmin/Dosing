@@ -41,12 +41,6 @@ export default function OurStoryPage() {
                 <header>
                   <h3>{member.name}</h3>
                   <p>{member.role}</p>
-                  <p>
-                    <a href={`mailto:${member.email}`}>{member.email}</a>
-                  </p>
-                  <p>
-                    <a href={member.phoneHref}>{member.phone}</a>
-                  </p>
                 </header>
                 <div>
                   {member.paragraphs.map((paragraph) => (
