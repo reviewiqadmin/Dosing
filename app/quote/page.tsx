@@ -20,7 +20,7 @@ export default function QuotePage() {
             required.
           </p>
         </div>
-        <QuoteForm id="quote" submitLabel="Request quotation" />
+        <QuoteForm id="quote" submitLabel="Request quotation" allowAttachment />
       </div>
     </section>
   );

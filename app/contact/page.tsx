@@ -4,7 +4,7 @@ import { offices } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact us",
-  description: "Contact DosInd at the Gurgaon and Haryana offices.",
+  description: "Contact DosInd at the Gurgaon and Kurukshetra offices.",
 };
 
 export default function ContactPage() {

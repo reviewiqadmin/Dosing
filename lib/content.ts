@@ -1,6 +1,6 @@
 export const company = {
   name: "DosInd",
-  expansion: "Design of Structures - Industrial Detailing & Engineering",
+  expansion: "Design of Structures - Structural Detailing & Engineering",
   established: "January 2022",
   motto:
     "Combining experience with technology to deliver precise, practical, and cost-effective structural solutions that add value to our clients' success.",
@@ -108,6 +108,17 @@ export type SoftwareGroup = {
 
 export const software: SoftwareGroup[] = [
   {
+    title: "Software used for calculation",
+    tools: [
+      "Staad Pro",
+      "Robot",
+      "Structural Analysis",
+      "SAP2000",
+      "RFEM",
+      "ETABS",
+    ],
+  },
+  {
     title: "Modeling and detailing",
     tools: [
       "Tekla Structures",
@@ -127,10 +138,10 @@ export const software: SoftwareGroup[] = [
 ];
 
 export const about = {
-  discipline: "Industrial Detailing & Engineering",
+  discipline: "Structural Detailing & Engineering",
   capabilities: "Tekla Steel & Concrete Modeling | Detailing | Engineering",
   paragraphs: [
-    "DOSIND (Design of Structures - Industrial Detailing & Engineering) is a specialized engineering and detailing company providing high-quality Tekla Steel and Concrete modeling, detailing, and engineering services to clients.",
+    "DOSIND (Design of Structures - Structural Detailing & Engineering) is a specialized engineering and detailing company providing high-quality Tekla Steel and Concrete modeling, detailing, and engineering services to clients.",
     "Founded in January 2022, DOSIND is built on the foundation of technical excellence, commitment, and reliability. Our team of experienced engineers and modelers deliver accurate, coordinated, and constructible solutions for industrial, commercial, and infrastructure projects.",
   ],
 };
@@ -143,12 +154,12 @@ export type TeamMember = {
 
 export const team: TeamMember[] = [
   {
-    name: "Pankaj Kumar",
-    role: "Founder and Director",
+    name: "Vishal Sharma",
+    role: "Founder and Managing Director",
     paragraphs: [
-      "Pankaj Kumar is a seasoned BIM engineering and detailing specialist with over 15 years of industry experience. His career spans a wide range of projects, from industrial facilities to commercial complexes and residential developments, where he has consistently delivered precision driven structural solutions.",
-      "Proficient in leading platforms such as Tekla Structures, AutoCAD, and Revit, Pankaj ensures seamless integration of design and detailing workflows. His expertise extends across multiple international standards, including Indian Codes, Eurocodes, and AISC, enabling him to execute projects that meet diverse regulatory and performance requirements.",
-      "Having collaborated with numerous prestigious European and Indian clients, Pankaj brings a global perspective to BIM implementation. His approach combines technical accuracy, design optimization, and innovative problem solving, making him a trusted leader in advancing DosInd's commitment to excellence in structural engineering.",
+      "Vishal Sharma is a highly experienced BIM engineering and detailing professional with over 15 years in the industry. As Founder and Managing Director at DosInd, he has successfully led numerous complex projects across industrial, commercial, and residential sectors for prestigious European and Indian clients.",
+      "Fluent in softwares including Tekla Structures, AutoCAD, Revit, and Advance Steel, Vishal ensures precision and efficiency in every stage of project delivery. His strong command of coordination platforms such as Autodesk Construction Cloud (ACC) and Trimble Connect enables seamless collaboration across multidisciplinary teams.",
+      "With deep knowledge of Eurocodes, Indian Standards, and AISC codes, he combines technical expertise with strategic project management, driving innovative solutions that meet the highest engineering and regulatory benchmarks. His leadership is defined by reliability, technical excellence, and a commitment to delivering projects that stand the test of time.",
     ],
   },
   {
@@ -159,15 +170,6 @@ export const team: TeamMember[] = [
       "With extensive knowledge of both Eurocodes and Indian Standards, Anuj has successfully delivered projects that meet stringent international and local requirements. His leadership combines technical precision with innovative problem-solving, guiding DosInd in executing demanding projects with reliability and excellence. He has a proven track record of delivering complex projects for prestigious European and Indian clients.",
     ],
   },
-  {
-    name: "Vishal Sharma",
-    role: "Founder and Project Manager",
-    paragraphs: [
-      "Vishal Sharma is a highly experienced BIM engineering and detailing professional with over 15 years in the industry. As Founder and Project Manager at DosInd, he has successfully led numerous complex projects across industrial, commercial, and residential sectors for prestigious European and Indian clients.",
-      "Fluent in softwares including Tekla Structures, AutoCAD, Revit, and Advance Steel, Vishal ensures precision and efficiency in every stage of project delivery. His strong command of coordination platforms such as Autodesk Construction Cloud (ACC) and Trimble Connect enables seamless collaboration across multidisciplinary teams.",
-      "With deep knowledge of Eurocodes, Indian Standards, and AISC codes, he combines technical expertise with strategic project management, driving innovative solutions that meet the highest engineering and regulatory benchmarks. His leadership is defined by reliability, technical excellence, and a commitment to delivering projects that stand the test of time.",
-    ],
-  },
 ];
 
 export type Office = {
@@ -176,7 +178,7 @@ export type Office = {
 
 export const offices: Office[] = [
   { name: "Gurgaon Office" },
-  { name: "Haryana Office" },
+  { name: "Kurukshetra Office" },
 ];
 
 export type Project = {

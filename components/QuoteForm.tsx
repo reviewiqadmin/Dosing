@@ -6,10 +6,16 @@ import { formConfirmation } from "@/lib/content";
 type QuoteFormProps = {
   id: string;
   submitLabel: string;
+  allowAttachment?: boolean;
 };
 
-export function QuoteForm({ id, submitLabel }: QuoteFormProps) {
+export function QuoteForm({
+  id,
+  submitLabel,
+  allowAttachment = false,
+}: QuoteFormProps) {
   const [confirmed, setConfirmed] = useState(false);
+  const [fileName, setFileName] = useState("");
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -59,6 +65,26 @@ export function QuoteForm({ id, submitLabel }: QuoteFormProps) {
         <label htmlFor={`${id}-message`}>Project message</label>
         <textarea id={`${id}-message`} name="message" rows={6} required />
       </div>
+      {allowAttachment ? (
+        <div className="field">
+          <label htmlFor={`${id}-file`}>Reference file</label>
+          <input
+            id={`${id}-file`}
+            name="reference"
+            type="file"
+            accept=".pdf,.png,.jpg,.jpeg,.webp,.gif,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.dwg,.dxf,.ifc,.rvt,.zip,.txt"
+            onChange={(event) => {
+              const file = event.target.files?.[0];
+              setFileName(file ? file.name : "");
+            }}
+          />
+          <p className="file-note">
+            {fileName
+              ? fileName
+              : "Optional. PDF, image, office, or CAD file."}
+          </p>
+        </div>
+      ) : null}
       <button type="submit" className="quote-button submit-button">
         {submitLabel}
       </button>
