@@ -146,9 +146,17 @@ export const about = {
   ],
 };
 
+export const enquiryEmails = [
+  "VishalSharma@DosInd.com",
+  "AnujSiingh@DosInd.com",
+];
+
 export type TeamMember = {
   name: string;
   role: string;
+  email: string;
+  phone: string;
+  phoneHref: string;
   paragraphs: string[];
 };
 
@@ -156,6 +164,9 @@ export const team: TeamMember[] = [
   {
     name: "Vishal Sharma",
     role: "Founder and Managing Director",
+    email: "VishalSharma@DosInd.com",
+    phone: "78359 22020",
+    phoneHref: "tel:+917835922020",
     paragraphs: [
       "Vishal Sharma is a highly experienced BIM engineering and detailing professional with over 15 years in the industry. As Founder and Managing Director at DosInd, he has successfully led numerous complex projects across commercial and residential sectors for prestigious European and Indian clients.",
       "Fluent in softwares including Tekla Structures, AutoCAD, Revit, and Advance Steel, Vishal ensures precision and efficiency in every stage of project delivery. His strong command of coordination platforms such as Autodesk Construction Cloud (ACC) and Trimble Connect enables seamless collaboration across multidisciplinary teams.",
@@ -165,6 +176,9 @@ export const team: TeamMember[] = [
   {
     name: "Anuj Singh",
     role: "Founder and Technical Director",
+    email: "AnujSiingh@DosInd.com",
+    phone: "99903 73927",
+    phoneHref: "tel:+919990373927",
     paragraphs: [
       "Anuj Singh brings over 16 years of specialized experience in structural engineering, with a proven track record in the design of steel and concrete structures across commercial and residential projects. His expertise lies in structural design optimization, ensuring cost-effective, safe, and efficient solutions for complex engineering challenges.",
       "With extensive knowledge of Eurocodes, Indian Standards, and AISC (American Institute of Steel Construction), Anuj has successfully delivered projects that meet stringent international and local requirements. His leadership combines technical precision with innovative problem-solving, guiding DosInd in executing demanding projects with reliability and excellence. He has a proven track record of delivering complex projects for prestigious European and Indian clients.",
@@ -183,13 +197,56 @@ export const offices: Office[] = [
 
 export type Project = {
   name: string;
-  summary: string;
+  paragraphs: string[];
   location?: string;
   image?: string;
 };
 
-/** Add project entries here as names and photographs become available. */
-export const projects: Project[] = [];
+/** Add further project entries here as names and photographs become available. */
+export const projects: Project[] = [
+  {
+    name: "Kisama Festival Ground",
+    location: "Kohima, Nagaland, India",
+    paragraphs: [
+      "This project involved the design and execution of a highly complex steel structure for a spectator seating area, distinguished by its architecturally challenging curved roof geometry.",
+      "Approximately 1,500 metric tons of structural steel were utilized, encompassing primary trusses, secondary members, and specialized curved elements.",
+    ],
+    image: "/projects/kisama-festival-ground.jpg",
+  },
+  {
+    name: "Steel structure under construction",
+    paragraphs: [
+      "Site photograph of a steel structure during construction.",
+    ],
+    image: "/site/site-5.jpg",
+  },
+];
+
+export const sitePhotos = [
+  {
+    src: "/site/site-1.jpg",
+    alt: "Steel frame and concrete building under construction",
+  },
+  {
+    src: "/site/site-2.jpg",
+    alt: "Process plant with piping and a steel structure",
+  },
+  {
+    src: "/site/site-3.jpg",
+    alt: "Concrete and steel pipe rack beside storage tanks",
+  },
+  {
+    src: "/site/site-4.jpg",
+    alt: "Building frame under construction on site",
+  },
+  {
+    src: "/site/site-5.jpg",
+    alt: "Steel structure of a process plant under construction",
+  },
+];
 
 export const formConfirmation =
-  "Thank you. Your message stays on this page and has not been emailed.";
+  "Your email draft is addressed to Vishal Sharma and Anuj Singh. Send it from your mail app to complete the request.";
+
+export const formFileNote =
+  "Attach the reference file in that draft before you send. The browser cannot add the file on its own.";

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { company, offices, services } from "@/lib/content";
+import { company, offices, services, team } from "@/lib/content";
 import { Logo } from "@/components/Logo";
 
 export function Footer() {
@@ -28,6 +28,16 @@ export function Footer() {
           <ul className="office-list">
             {offices.map((office) => (
               <li key={office.name}>{office.name}</li>
+            ))}
+          </ul>
+          <h2 className="footer-subhead">Contact</h2>
+          <ul>
+            {team.map((member) => (
+              <li key={member.email}>
+                <a href={`mailto:${member.email}`}>{member.email}</a>
+                <br />
+                <a href={member.phoneHref}>{member.phone}</a>
+              </li>
             ))}
           </ul>
         </div>

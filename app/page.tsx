@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { home, reasons, services, software } from "@/lib/content";
+import { home, projects, reasons, services, sitePhotos, software } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Structural engineering consultancy",
@@ -72,27 +72,48 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section" aria-labelledby="site-photos-heading">
+        <div className="wrap">
+          <h2 id="site-photos-heading">Site photographs</h2>
+          <div className="photo-grid">
+            {sitePhotos.map((photo) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img key={photo.src} src={photo.src} alt={photo.alt} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section" aria-labelledby="project-heading">
         <div className="wrap">
           <div className="section-head">
             <h2 id="project-heading">Projects</h2>
             <Link href="/projects">Project page</Link>
           </div>
-          <article className="project-feature">
-            <div className="project-frame">
-              <span>Project photograph to be added</span>
-            </div>
-            <div>
-              <h3>Project name to be added</h3>
-              <p>
-                One project image will be published in this space. Further
-                projects can be added to the same list.
-              </p>
-              <Link href="/projects" className="text-link">
-                View projects
-              </Link>
-            </div>
-          </article>
+          {projects[0] ? (
+            <article className="project-feature">
+              <div className="project-frame">
+                {projects[0].image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={projects[0].image} alt={projects[0].name} />
+                ) : (
+                  <span>Project photograph to be added</span>
+                )}
+              </div>
+              <div>
+                <h3>{projects[0].name}</h3>
+                {projects[0].location ? (
+                  <p className="meta">{projects[0].location}</p>
+                ) : null}
+                {projects[0].paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+                <Link href="/projects" className="text-link">
+                  View projects
+                </Link>
+              </div>
+            </article>
+          ) : null}
         </div>
       </section>
 

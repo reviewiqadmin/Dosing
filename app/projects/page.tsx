@@ -15,8 +15,7 @@ export default function ProjectsPage() {
         <p className="kicker">Projects</p>
         <h1>Selected work</h1>
         <p className="lede">
-          Project names and photographs will be published here. The page is
-          ready for four or five entries.
+          Selected work. Further projects can be added to this list.
         </p>
 
         {projects.length === 0 ? (
@@ -41,7 +40,7 @@ export default function ProjectsPage() {
                   {project.image ? (
                     // Photographs are local files added under public/.
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={project.image} alt="" />
+                    <img src={project.image} alt={project.name} />
                   ) : (
                     <span>Project photograph to be added</span>
                   )}
@@ -49,7 +48,9 @@ export default function ProjectsPage() {
                 <div>
                   <h2>{project.name}</h2>
                   {project.location ? <p className="meta">{project.location}</p> : null}
-                  <p>{project.summary}</p>
+                  {project.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
                 </div>
               </article>
             ))}

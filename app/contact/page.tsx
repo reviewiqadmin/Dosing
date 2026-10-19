@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { QuoteForm } from "@/components/QuoteForm";
-import { offices } from "@/lib/content";
+import { offices, team } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact us",
@@ -15,10 +15,17 @@ export default function ContactPage() {
           <p className="kicker">Contact us</p>
           <h1>Talk with the team</h1>
           <p className="lede">
-            Send a project note or a careers introduction. The offices below
-            are named here; street addresses are not published on this page.
+            Send a project note or a careers introduction. Quotation requests,
+            contact messages, and applications go to both email addresses.
           </p>
           <ul className="office-cards">
+            {team.map((member) => (
+              <li key={member.email} className="contact-card">
+                <span>{member.name}</span>
+                <a href={`mailto:${member.email}`}>{member.email}</a>
+                <a href={member.phoneHref}>{member.phone}</a>
+              </li>
+            ))}
             {offices.map((office) => (
               <li key={office.name}>{office.name}</li>
             ))}

@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { formConfirmation } from "@/lib/content";
+import { enquiryEmails, formConfirmation, formFileNote } from "@/lib/content";
 
 type QuoteFormProps = {
   id: string;
@@ -19,14 +19,42 @@ export function QuoteForm({
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const name = String(data.get("name") ?? "");
+    const email = String(data.get("email") ?? "");
+    const phone = String(data.get("phone") ?? "");
+    const company = String(data.get("company") ?? "");
+    const message = String(data.get("message") ?? "");
+    const lines = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Phone: ${phone || "Not provided"}`,
+      `Company: ${company || "Not provided"}`,
+      "",
+      message,
+    ];
+    if (allowAttachment) {
+      lines.push(
+        "",
+        fileName
+          ? `Reference file to attach: ${fileName}`
+          : "Reference file: none",
+      );
+    }
+    const subject = allowAttachment
+      ? `Quotation request from ${name}`
+      : `Message from ${name}`;
+    const href = `mailto:${enquiryEmails.join(",")}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+    window.location.href = href;
     setConfirmed(true);
   }
 
   if (confirmed) {
     return (
-      <p className="form-success" role="status">
-        {formConfirmation}
-      </p>
+      <div className="form-success" role="status">
+        <p>{formConfirmation}</p>
+        {allowAttachment && fileName ? <p>{formFileNote}</p> : null}
+      </div>
     );
   }
 
