@@ -50,10 +50,10 @@ export const services: Service[] = [
     slug: "structural-steel-modeling",
     title: "Structural Steel Modeling",
     summary:
-      "Tekla models for complex industrial structures, with material estimation and constructibility analysis.",
+      "Tekla models for complex structures, with material estimation and constructibility analysis.",
     points: [
       "Tekla Structures integration",
-      "Complex industrial structures",
+      "Complex structures",
       "Accurate material estimation",
       "Constructibility analysis",
     ],
@@ -97,7 +97,7 @@ export const services: Service[] = [
 ];
 
 export const servicesIntro = {
-  title: "Industrial Detailing & Engineering Services",
+  title: "Structural Detailing & Engineering Services",
   lede: "Delivering precise, practical, and constructible structural solutions through advanced technology and engineering excellence.",
 };
 
@@ -142,7 +142,7 @@ export const about = {
   capabilities: "Tekla Steel & Concrete Modeling | Detailing | Engineering",
   paragraphs: [
     "DOSIND (Design of Structures - Structural Detailing & Engineering) is a specialized engineering and detailing company providing high-quality Tekla Steel and Concrete modeling, detailing, and engineering services to clients.",
-    "Founded in January 2022, DOSIND is built on the foundation of technical excellence, commitment, and reliability. Our team of experienced engineers and modelers deliver accurate, coordinated, and constructible solutions for industrial, commercial, and infrastructure projects.",
+    "Founded in January 2022, DOSIND is built on the foundation of technical excellence, commitment, and reliability. Our team of experienced engineers and modelers deliver accurate, coordinated, and constructible solutions for commercial and infrastructure projects.",
   ],
 };
 
@@ -157,17 +157,17 @@ export const team: TeamMember[] = [
     name: "Vishal Sharma",
     role: "Founder and Managing Director",
     paragraphs: [
-      "Vishal Sharma is a highly experienced BIM engineering and detailing professional with over 15 years in the industry. As Founder and Managing Director at DosInd, he has successfully led numerous complex projects across industrial, commercial, and residential sectors for prestigious European and Indian clients.",
+      "Vishal Sharma is a highly experienced BIM engineering and detailing professional with over 15 years in the industry. As Founder and Managing Director at DosInd, he has successfully led numerous complex projects across commercial and residential sectors for prestigious European and Indian clients.",
       "Fluent in softwares including Tekla Structures, AutoCAD, Revit, and Advance Steel, Vishal ensures precision and efficiency in every stage of project delivery. His strong command of coordination platforms such as Autodesk Construction Cloud (ACC) and Trimble Connect enables seamless collaboration across multidisciplinary teams.",
-      "With deep knowledge of Eurocodes, Indian Standards, and AISC codes, he combines technical expertise with strategic project management, driving innovative solutions that meet the highest engineering and regulatory benchmarks. His leadership is defined by reliability, technical excellence, and a commitment to delivering projects that stand the test of time.",
+      "With deep knowledge of Eurocodes, Indian Standards, and AISC (American Institute of Steel Construction) codes, he combines technical expertise with strategic project management, driving innovative solutions that meet the highest engineering and regulatory benchmarks. His leadership is defined by reliability, technical excellence, and a commitment to delivering projects that stand the test of time.",
     ],
   },
   {
     name: "Anuj Singh",
     role: "Founder and Technical Director",
     paragraphs: [
-      "Anuj Singh brings over 16 years of specialized experience in structural engineering, with a proven track record in the design of steel and concrete structures across industrial, commercial, and residential projects. His expertise lies in structural design optimization, ensuring cost-effective, safe, and efficient solutions for complex engineering challenges.",
-      "With extensive knowledge of both Eurocodes and Indian Standards, Anuj has successfully delivered projects that meet stringent international and local requirements. His leadership combines technical precision with innovative problem-solving, guiding DosInd in executing demanding projects with reliability and excellence. He has a proven track record of delivering complex projects for prestigious European and Indian clients.",
+      "Anuj Singh brings over 16 years of specialized experience in structural engineering, with a proven track record in the design of steel and concrete structures across commercial and residential projects. His expertise lies in structural design optimization, ensuring cost-effective, safe, and efficient solutions for complex engineering challenges.",
+      "With extensive knowledge of Eurocodes, Indian Standards, and AISC (American Institute of Steel Construction), Anuj has successfully delivered projects that meet stringent international and local requirements. His leadership combines technical precision with innovative problem-solving, guiding DosInd in executing demanding projects with reliability and excellence. He has a proven track record of delivering complex projects for prestigious European and Indian clients.",
     ],
   },
 ];

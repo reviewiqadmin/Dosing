@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Careers",
-  description: "How to get in touch with DosInd about future roles.",
+  description: "No roles are open at DosInd as of now.",
 };
 
 export default function CareersPage() {
@@ -13,9 +13,9 @@ export default function CareersPage() {
         <p className="kicker">Careers</p>
         <h1>Work with DosInd</h1>
         <p className="lede">
-          DosInd is not listing open roles on this page. If you would like to
-          be considered, send a note through the contact form with your
-          background and the kind of work you do.
+          No roles are open as of now. If you would like to be considered
+          later, send a note through the contact form with your background
+          and the kind of work you do.
         </p>
         <Link href="/contact" className="quote-button">
           Contact us
