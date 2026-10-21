@@ -38,7 +38,7 @@ export default function ContactPage() {
             </p>
           </div>
         </div>
-        <QuoteForm id="contact" submitLabel="Send message" />
+        <QuoteForm id="contact" submitLabel="Send message" allowAttachment />
       </div>
     </section>
   );
