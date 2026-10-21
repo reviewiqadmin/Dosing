@@ -15,21 +15,28 @@ export default function ContactPage() {
           <p className="kicker">Contact us</p>
           <h1>Talk with the team</h1>
           <p className="lede">
-            Send a project note or a careers introduction. Quotation requests,
-            contact messages, and applications go to both email addresses.
+            Call the team or send a project note or careers introduction through
+            the form.
           </p>
-          <ul className="office-cards">
+
+          <div className="contact-people">
             {team.map((member) => (
-              <li key={member.email} className="contact-card">
-                <span>{member.name}</span>
-                <a href={`mailto:${member.email}`}>{member.email}</a>
-                <a href={member.phoneHref}>{member.phone}</a>
-              </li>
+              <div key={member.name} className="contact-person">
+                <p className="contact-person-name">{member.name}</p>
+                <p className="contact-person-role">{member.role}</p>
+                <a className="contact-person-phone" href={member.phoneHref}>
+                  {member.phone}
+                </a>
+              </div>
             ))}
-            {offices.map((office) => (
-              <li key={office.name}>{office.name}</li>
-            ))}
-          </ul>
+          </div>
+
+          <div className="contact-locations">
+            <p className="contact-locations-label">Locations</p>
+            <p className="contact-locations-list">
+              {offices.map((office) => office.name).join(" · ")}
+            </p>
+          </div>
         </div>
         <QuoteForm id="contact" submitLabel="Send message" />
       </div>

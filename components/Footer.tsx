@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="wrap footer-grid">
         <div>
-          <Logo />
+          <Logo variant="light" />
           <p className="footer-line">{company.footerLine}</p>
           <p className="footer-copy">© {year} DosInd</p>
         </div>
@@ -33,8 +33,8 @@ export function Footer() {
           <h2 className="footer-subhead">Contact</h2>
           <ul>
             {team.map((member) => (
-              <li key={member.email}>
-                <a href={`mailto:${member.email}`}>{member.email}</a>
+              <li key={member.name}>
+                {member.name}
                 <br />
                 <a href={member.phoneHref}>{member.phone}</a>
               </li>
